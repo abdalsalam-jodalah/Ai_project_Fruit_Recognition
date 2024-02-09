@@ -1,0 +1,87 @@
+/* Root container */
+.root {
+    -fx-background-color: #2B2B2B; /* Dark background color */
+    -fx-text-fill: #CCCCCC; /* Light text color */
+}
+
+/* Buttons */
+/*.button {*/
+/*    -fx-background-color: #3C3F41;*/
+/*    -fx-text-fill: #FFFFFF; !* White text for better readability *!*/
+/*    -fx-border-color: #4A4A4A;*/
+/*    -fx-border-width: 2;*/
+/*}*/
+.button{
+    -fx-background-color: white;
+}
+
+
+.button:hover {
+    -fx-background-color: #4C4C4C; /* Slightly lighter on hover */
+}
+
+/* Labels */
+.labels {
+       -fx-text-fill:linear-gradient(to right, #5f9aa1, #84329e);
+/* Light text color for labels */
+}
+.labels1{
+    -fx-text-fill:white;
+}
+#sidebar .label {
+    -fx-text-fill: #CCCCCC; /* Lighter text color for better visibility in dark mode */
+}
+
+#sidebar {
+    -fx-background-color: #333333;
+}
+
+/*!* Text fields *!*/
+/*.text-field {*/
+/*    -fx-background-color: #3C3F41;*/
+/*    -fx-text-fill: #FFFFFF;*/
+/*    -fx-prompt-text-fill: #757575; !* Lighter color for prompt text *!*/
+/*}*/
+
+/* Radio Buttons */
+/*.radio-button .dot {*/
+/*    -fx-background-color: #3C3F41;*/
+/*}*/
+
+/*.radio-button:selected .dot {*/
+/*    -fx-background-color: #FFFFFF; !* White dot when selected *!*/
+/*}*/
+
+/*!* Check Boxes *!*/
+/*.check-box {*/
+/*    -fx-background-color: #3C3F41;*/
+/*}*/
+
+/*.check-box:selected {*/
+/*    -fx-background-color: #FFFFFF; !* White check when selected *!*/
+/*}*/
+
+/* Tables */
+.table-view {
+    -fx-base: #2B2B2B; /* Dark background for table */
+    -fx-control-inner-background: #2B2B2B;
+    -fx-table-cell-border-color: #4A4A4A;
+    -fx-table-header-border-color: #4A4A4A;
+}
+
+.table-row-cell:filled:even {
+    -fx-background-color: #262626; /* Slightly different color for even rows */
+}
+
+.table-row-cell:filled:odd {
+    -fx-background-color: #2B2B2B; /* Slightly different color for odd rows */
+}
+
+/* Scroll Bars */
+.scroll-bar {
+    -fx-background-color: #3C3F41;
+    -fx-fill: #4A4A4A;
+}
+/* styles.css */
+
+

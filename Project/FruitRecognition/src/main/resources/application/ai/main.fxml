@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="415.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ai.HelloController">
+   <children>
+      <Button fx:id="StratApplicationButton" layoutX="36.0" layoutY="330.0" mnemonicParsing="false" onAction="#onStratApplicationButtonClick" text="Start">
+         <textFill>
+            <LinearGradient endX="0.7624703087885986" endY="0.8764845605700713" startX="0.15201900237529709" startY="0.22802850356294538">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.37134504318237305" green="0.605555534362793" blue="0.6315789222717285" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5195500254631042" green="0.1946881115436554" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <ImageView fx:id="StartImageView" fitHeight="227.0" fitWidth="211.0" layoutX="270.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@./../../Images/Start.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="Headline" layoutX="34.0" layoutY="110.0" prefHeight="71.0" prefWidth="214.0" text="Fruit Recognition System" wrapText="true">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7007125890736342" endY="0.334916864608076" startX="0.2517814726840855">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.37134504318237305" green="0.605555534362793" blue="0.6315789222717285" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5195500254631042" green="0.1946881115436554" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="StartText" layoutX="35.0" layoutY="186.0" prefHeight="105.0" prefWidth="236.0" text="Using the Neural Network, this model capable of distinguishing between different fruits, specifically Apples, Bananas, and Oranges, based on their visual features. " wrapText="true" />
+      <RadioButton fx:id="DarkButton" layoutX="37.0" layoutY="291.0" mnemonicParsing="false" text="Dark" />
+   </children>
+</AnchorPane>

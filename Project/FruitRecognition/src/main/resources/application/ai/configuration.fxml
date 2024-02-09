@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="693.0" prefWidth="1469.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ai.configurationController">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="-2.0" maxHeight="-Infinity" prefHeight="695.0" prefWidth="813.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox fx:id="sidebar" prefHeight="1000.0" prefWidth="186.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="70.0" prefWidth="186.0">
+                     <children>
+                        <ImageView fitHeight="65.0" fitWidth="44.0" layoutX="75.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Start.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="72.0" prefWidth="153.0">
+                     <children>
+                        <ChoiceBox fx:id="ActivationFuncutionChoiceBox" layoutX="12.0" layoutY="43.0" prefHeight="26.0" prefWidth="159.0" style="-fx-background-radius: 10px; -fx-background-color: transperant; -fx-border-radius: 10px; -fx-border-width: 2px; -fx-background-color: white;" />
+                        <Label layoutX="17.0" layoutY="16.0" prefHeight="17.0" prefWidth="115.0" text="Activation Function" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="67.0" prefWidth="153.0">
+                     <children>
+                        <TextField fx:id="PerceptronsNumberTextField" layoutX="14.0" layoutY="40.0" prefHeight="28.0" prefWidth="160.0" promptText="Perceptrons Number" style="-fx-background-color: white; -fx-border-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+                        <Label layoutX="17.0" layoutY="13.0" prefHeight="17.0" prefWidth="121.0" text="Perceptrons Number" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="67.0" prefWidth="153.0">
+                     <children>
+                        <TextField fx:id="EpochesNumberTextField" layoutX="14.0" layoutY="44.0" prefHeight="28.0" prefWidth="160.0" promptText="Epochs Number" style="-fx-background-color: white; -fx-border-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+                        <Label layoutX="18.0" layoutY="16.0" prefHeight="17.0" prefWidth="121.0" text="Epochs Number" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="67.0" prefWidth="153.0">
+                     <children>
+                        <TextField fx:id="LearningRateTextField" layoutX="14.0" layoutY="44.0" prefHeight="28.0" prefWidth="160.0" promptText="Learning Rate" style="-fx-background-color: white; -fx-border-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+                        <Label layoutX="18.0" layoutY="18.0" prefHeight="17.0" prefWidth="121.0" text="Learning Rate" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="186.0">
+                     <children>
+                        <TextField fx:id="GoalTextField" layoutX="16.0" layoutY="46.0" prefHeight="28.0" prefWidth="160.0" promptText="Goal" style="-fx-background-color: white; -fx-border-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+                        <Label layoutX="18.0" layoutY="21.0" prefHeight="17.0" prefWidth="121.0" text="Goal" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="54.0" prefWidth="153.0" style="-fx-background-color: transperant;">
+                     <children>
+                        <Button layoutX="22.0" layoutY="31.0" mnemonicParsing="false" onAction="#UploadFileHandllar" prefHeight="26.0" prefWidth="141.0" stylesheets="@../../../../../src/main/resources/Styles/Buttons.css" text="Upload file" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="54.0" prefWidth="153.0" style="-fx-background-color: transperant;">
+                     <children>
+                        <Button fx:id="StartTraining" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#StartTrainingHandllar" prefHeight="26.0" prefWidth="141.0" stylesheets="@../../../../../src/main/resources/Styles/Buttons.css" text="Start Training" />
+                        <Button fx:id="StartTesting" layoutX="23.0" layoutY="23.0" mnemonicParsing="false" onAction="#StartTestingHandllar" prefHeight="26.0" prefWidth="141.0" stylesheets="@../../../../../src/main/resources/Styles/Buttons.css" text="Start Testing" />
+                        <Button fx:id="TestAgain" layoutX="23.0" layoutY="23.0" mnemonicParsing="false" onAction="#TestAgainHandllar" prefHeight="26.0" prefWidth="141.0" stylesheets="@../../../../../src/main/resources/Styles/Buttons.css" text="Test again" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="54.0" prefWidth="153.0" style="-fx-background-color: transperant;">
+                     <children>
+                        <Button fx:id="TrainFromSkratch" layoutX="25.0" layoutY="20.0" mnemonicParsing="false" onAction="#TrainFromSkratchHandllar" prefHeight="26.0" prefWidth="141.0" stylesheets="@../../../../../src/main/resources/Styles/Buttons.css" text=" Train From skratch " />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="54.0" prefWidth="153.0" style="-fx-background-color: transperant;">
+                     <children>
+                        <Button fx:id="TrainAgain" layoutX="25.0" layoutY="15.0" mnemonicParsing="false" onAction="#TrainAgainHandllar" prefHeight="26.0" prefWidth="141.0" stylesheets="@../../../../../src/main/resources/Styles/Buttons.css" text=" Train again" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="695.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView id="table-view" fx:id="DataTableView" layoutX="29.0" layoutY="104.0" prefHeight="488.0" prefWidth="571.0" stylesheets="@../../../../../src/main/resources/Styles/tableView.css">
+                     <columns>
+                        <TableColumn fx:id="colorColumn" text="Color">
+                           <cellValueFactory><PropertyValueFactory property="color" /></cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn fx:id="sweetnessColumn" text="Sweetness">
+<!--                           <cellValueFactory>-->
+<!--                              &lt;!&ndash; Make sure the property name matches the variable name in the fruits class &ndash;&gt;-->
+<!--                              <PropertyValueFactory property="sweetnes" />-->
+<!--                           </cellValueFactory>-->
+                        </TableColumn>
+                        <TableColumn fx:id="desiredNameColumn" text="Desired Name">
+<!--                           <cellValueFactory>-->
+<!--                              <PropertyValueFactory property="desiredName" />-->
+<!--                           </cellValueFactory>-->
+                        </TableColumn>
+                        <TableColumn fx:id="actualNameColumn" text="Actual Name">
+<!--                           <cellValueFactory>-->
+<!--                              <PropertyValueFactory property="actualName" />-->
+<!--                           </cellValueFactory>-->
+                        </TableColumn>
+                        <!-- Make sure to add the rest of the columns as needed -->
+                     </columns>
+
+
+               </TableView>
+                  <Label fx:id="StatusLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="592.0" prefHeight="60.0" prefWidth="627.0" styleClass="labels1" text="Status" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="42.0" layoutY="1.0" prefHeight="100.0" prefWidth="564.0" styleClass="labels" text="Fruit Recognition System" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.7007125890736342" endY="0.334916864608076" startX="0.2517814726840855">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.37254902720451355" green="0.6039215922355652" blue="0.6313725709915161" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5176470875740051" green="0.19607843458652496" blue="0.6196078658103943" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="AccuracyLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="643.0" prefHeight="47.0" prefWidth="160.0" styleClass="labels" text="Accuracy:">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.37254902720451355" green="0.6039215922355652" blue="0.6313725709915161" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5176470875740051" green="0.19607843458652496" blue="0.6196078658103943" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="AccuracyValueLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="640.0" prefHeight="51.0" prefWidth="150.0" styleClass="labels1" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="PerformanceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="322.0" layoutY="640.0" prefHeight="49.0" prefWidth="161.0" styleClass="labels" text="Performance:">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.37254902720451355" green="0.6039215922355652" blue="0.6313725709915161" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5176470875740051" green="0.19607843458652496" blue="0.6196078658103943" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="PerformanceValueLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="480.0" layoutY="642.0" prefHeight="47.0" prefWidth="119.0" styleClass="labels1" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="epochsLabel" layoutX="50.0" layoutY="70.0" styleClass="labels1" text="Epoch : " />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Pane fx:id="networkPane" layoutX="818.0" layoutY="130.0" prefHeight="498.0" prefWidth="569.0" />
+      <Label alignment="CENTER" layoutX="901.0" prefHeight="100.0" prefWidth="239.0" styleClass="labels" text="Neural Network" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7007125890736342" endY="0.334916864608076" startX="0.2517814726840855">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.37254902720451355" green="0.6039215922355652" blue="0.6313725709915161" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5176470875740051" green="0.19607843458652496" blue="0.6196078658103943" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

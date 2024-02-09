@@ -1,0 +1,15 @@
+#sidebar {
+    -fx-background-color: #e2e2e2;
+}
+.button{
+    -fx-background-color: transperant;
+}
+.table-view .column-header .label {
+    -fx-graphic: linear-gradient(to right, #5f9aa1, #84329e);
+    -fx-text-fill: linear-gradient(to right, #5f9aa1, #84329e);;
+}
+
+
+#sidebar .label {
+    -fx-text-fill: #000000;
+}
